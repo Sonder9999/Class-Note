@@ -1,0 +1,500 @@
+
+/* 多行注释
+ * FileName: main.cpp
+ * Function: Print a string to screen
+ * Author:   yyh
+ * E-mail:   feifanyyh@163.com
+ * Date:     Oct 18th, 2023
+ */
+ 
+#include <iostream>
+#include <climits>
+#include <cfloat>
+ 
+ 
+using namespace std;
+ 
+int main()
+{
+    cout << "Hello world!HHHHHHHHHHHHHHHHHH\n" // 引入转义字符\n
+         << "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHH\n"
+         << "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHH\n"
+         // \t 表示制表符，一般占8个空格位置
+         << "HH\tHHHHHHHHHHHHHHHHHHHHHHHHHH" << endl;
+ 
+    // DataType:内建类型和用户定义类型
+    // 内建类型：bool,char,int,float,double,long, long long
+    // 内建类型可以有修饰符：signed、unsigned
+    // 默认都是signed类型
+    // 数据类型 变量名;
+    bool bl1; // 变量的声明
+    bool bl2=true;// 变量的定义
+    cout << "bl1=" << bl1 << endl;
+    cout << "bl2=" << bl2 << endl;
+    cout << "Sizeof(bool)=" << sizeof(bool) << endl;
+    cout << "Sizeof(bl1)=" << sizeof(bl1) << endl;
+ 
+    char ch1;
+    char ch2='a'; // 实际上ch2里存储的是字符a的ASCII编码值
+    cout << "ch1=" << ch1 << endl;
+    ch1=101; // 按ASCII编码值赋值，实际为字符e
+    cout << "ch1=" << ch1 << endl; // 输出字符e
+    cout << "ch1=" << (int)ch1 << endl;// 输出字符e的编码值
+    cout << "ch2=" << ch2 << endl;
+    cout << "ch2=" << (int)ch2 << endl;
+    cout << "A=" <<(char) (ch2-32) << endl;
+    cout << "Sizeof(char)=" << sizeof(char) << endl;
+    cout << "Sizeof(ch1)=" << sizeof(ch1) << endl;
+ 
+    int a;
+    int b=10;
+    int c(100); // C++11里的初始化方式
+    int d{1000};// C++11里的初始化方式
+    cout << "a=" << a << endl;
+    cout << "b=" << b << endl;
+    cout << "c=" << c << endl;
+    cout << "d=" << d << endl;
+    cout << "Sizeof(int)=" << sizeof(int) << endl;
+    cout << "Sizeof(a)=" << sizeof(a) << endl;
+    cout << "The biggest of int is: " << INT_MAX << endl;
+    cout << "The smallest of int is: " << INT_MIN << endl;
+ 
+    int sum=b+c+ch2;
+    cout << "sum=" << sum << endl;
+ 
+    // 整数相除，其结果必为整数
+    cout << "1/2=" << 1/2 << endl;
+    cout << "3/2=" << 3/2 << endl;
+    cout << "5/3=" << 5/3 << endl;
+    cout << "4/2=" << 4/2 << endl;
+ 
+    // % 取模或者是求余，其操作数只能是整数
+    cout << "1%2=" << 1%2 << endl;
+    cout << "3%2=" << 3%2 << endl;
+ 
+    /*
+     * 形如12321，10101，34543这样的数叫做回文数
+     * 23523，12435，这样的数不是回文数
+     * 假定输入的就是一个5位数，如何判断该数是否为回文数
+     */
+    int number;
+ret:
+    cout << "Input a number(10000-99999):";
+    cin >> number;
+    if(number<10000 || number>99999)
+        goto ret;
+    if(number/10000==number%10 && (number%10000)/1000==(number%100)/10 )
+        cout << number << " is a palindromic number" << endl;
+    else
+        cout << number << " is not a palindromic number" << endl;
+ 
+    long l1;
+    long l2=1000l;
+    cout << "l1=" << l1 << endl;
+    cout << "l2=" << l2 << endl;
+    cout << "Sizeof(long)=" << sizeof(long) << endl;
+    cout << "Sizeof(l2)=" << sizeof(l2) << endl;
+    cout << "The biggest of long is: " << LONG_MAX << endl;
+    cout << "The smallest of long is: " << LONG_MIN << endl;
+ 
+    // 浮点数的表示格式参见IEEE 754
+    float f1=1000;
+    cout << "f1=" << f1 << endl;
+    cout << "Sizeof(float)=" << sizeof(float) << endl;
+    cout << "Sizeof(f1)=" << sizeof(f1) << endl;
+    cout << "The biggest of float is: " << FLT_MAX << endl;
+    cout << "The smallest of float is: " << FLT_MIN << endl;
+ 
+    double d1=1000;
+    cout << "d1=" << d1 << endl;
+    cout << "Sizeof(double)=" << sizeof(double) << endl;
+    cout << "Sizeof(d1)=" << sizeof(d1) << endl;
+    cout << "The biggest of double is: " << DBL_MAX << endl;
+    cout << "The smallest of double is: " << DBL_MIN << endl;
+ 
+    long double ld1=1000;
+    cout << "ld1=" << ld1 << endl;
+    cout << "Sizeof(long double)=" << sizeof(long double) << endl;
+    cout << "Sizeof(ld1)=" << sizeof(ld1) << endl;
+    cout << "The biggest of long double is: " << LDBL_MAX << endl;
+    cout << "The smallest of long double is: " << LDBL_MIN << endl;
+ 
+    long long ll1=1000;
+    cout << "ll1=" << ll1 << endl;
+    cout << "Sizeof(long long)=" << sizeof(long long) << endl;
+    cout << "Sizeof(ll1)=" << sizeof(ll1) << endl;
+    cout << "The biggest of long long is: " << LLONG_MAX << endl;
+    cout << "The smallest of long long is: " << LLONG_MIN << endl;
+ 
+    // 定义一个变量，存储全球的总人口，应该如何定义此变量
+    // long long最合适
+    return 0;
+}
+上面为课件（原文件：链接：https://pan.baidu.com/s/1sjY-LEzQIemFDH0_civWBA?pwd=cyyp 
+提取码：cyyp 
+--来自百度网盘超级会员V1的分享）
+
+以下为补充知识（来源GPT）
+
+
+
+
+
+
+
+
+
+1.讲一下c++中的内建类型
+
+ChatGPT
+
+C++中有一些内建数据类型，也被称为基本数据类型，用于存储不同种类的数据。这些数据类型提供了不同的大小和表示范围，以满足各种编程需求。以下是C++中的一些常见内建数据类型：
+
+整数类型：
+
+int：通常用于表示整数，其大小取决于编译器，但通常至少为32位。
+short：短整数，通常为16位。
+long：长整数，通常为32位。
+long long：更长的整数，通常为64位。
+字符类型：
+
+char：用于表示单个字符。
+浮点类型：
+
+float：单精度浮点数，通常为32位，用于表示小数。
+double：双精度浮点数，通常为64位，提供更高的精度。
+long double：更长的浮点数，通常为80位或更多，提供更高的精度。
+布尔类型：
+
+bool：用于表示布尔值，只能取true或false。
+无类型类型：
+
+void：通常用于表示无返回值的函数，或指针的类型。
+指针类型：
+
+用于存储内存地址，可以指向其他数据类型。
+枚举类型：
+
+enum：用于创建一个有限的命名值集合。
+自定义类型：
+
+使用struct或class关键字可以创建自定义数据类型，这些类型可以包含多个成员变量和函数。
+这些基本数据类型在C++中具有不同的大小和精度，根据程序的需要选择合适的数据类型。除了这些内建数据类型，C++还允许用户创建自定义数据类型，这是面向对象编程的核心特性之一。使用这些数据类型，程序员可以有效地存储和处理各种不同类型的数据。
+
+2.结合修饰符来讲
+
+ChatGPT
+
+C++中，修饰符是用来修改基本数据类型的关键词，以改变它们的性质或范围。修饰符通常与整数类型和浮点类型一起使用，以增加或减小它们的范围、精度或存储方式。以下是一些常见的修饰符：
+
+C++中，修饰符是用来修改基本数据类型的关键词，以改变它们的性质或范围。修饰符通常与整数类型和浮点类型一起使用，以增加或减小它们的范围、精度或存储方式。以下是一些常见的修饰符：
+
+signed 和 unsigned：
+这些修饰符通常用于整数类型，如 int、short 和 long。
+signed 表示可以存储正数和负数，是默认的修饰符。
+unsigned 表示只能存储非负数，它扩展了数据类型的范围，但不能存储负数。
+cppCopy code
+
+unsigned int x; // 只能存储非负整数 signed short y; // 可以存储正数和负数
+
+short 和 long：
+这些修饰符通常用于整数类型，如 int。
+short 表示整数类型的缩短版本，通常为16位。
+long 表示整数类型的延长版本，通常为32位。
+cppCopy code
+
+short int a; // 短整数，通常为16位 long int b; // 长整数，通常为32位
+
+long long：
+这是一个用于整数类型的更长的修饰符，通常为64位，提供了更大的整数范围。
+cppCopy code
+
+long long int c; // 更长的整数，通常为64位
+
+float、double 和 long double：
+这些修饰符通常用于浮点数类型。
+float 表示单精度浮点数，通常为32位。
+double 表示双精度浮点数，通常为64位。
+long double 表示更长的浮点数，通常为80位或更多，提供更高的精度。
+cppCopy code
+
+float f; // 单精度浮点数，通常为32位 double d; // 双精度浮点数，通常为64位 long double ld; // 更长的浮点数，通常为80位或更多
+
+bool：用于表示布尔值，只能取true或false。讲一下这个
+
+ChatGPT
+
+bool 是C++中用于表示布尔值的数据类型，它只能存储两个可能的值：true 和 false。布尔类型通常用于条件判断，例如在控制流程中的决策结构（if语句、while循环等）或用于表示逻辑状态。以下是一些关于bool类型的重要信息：
+
+值：bool类型只有两个有效的值：true和false。true表示真（真实或成立），false表示假（不真实或不成立）。
+
+大小：bool类型通常只占用1字节的内存，但具体的大小可能取决于编译器和系统。
+
+运算符：bool类型通常用于布尔逻辑运算，例如逻辑与（&&）、逻辑或（||）和逻辑非（!）。这些运算符可以用于组合和操作布尔值。
+
+条件判断：bool类型常用于条件判断。例如，您可以在if语句中使用布尔表达式来执行条件分支。
+
+cppCopy code
+
+bool isTrue = true; bool isFalse = false; if (isTrue) { // 这段代码将执行，因为isTrue为true } if (isFalse) { // 这段代码不会执行，因为isFalse为false }
+
+函数返回值：布尔类型常用于表示函数的成功或失败。例如，函数可以返回true表示成功，返回false表示失败。
+cppCopy code
+
+bool loginSuccessful = login(username, password); if (loginSuccessful) { // 登录成功的处理 } else { // 登录失败的处理 }
+
+bool类型在编程中非常有用，因为它允许程序员进行条件判断和逻辑操作，从而控制程序的行为。布尔类型常用于编写决策逻辑，使程序可以根据不同的情况采取不同的行动。
+
+解释一下char
+
+ChatGPT
+
+char 是C++中的一种基本数据类型，用于表示单个字符。这可以是字母、数字、符号或控制字符，例如换行符（'\n'）或制表符（'\t'）。以下是一些关于char类型的重要信息：
+
+大小：char通常占用一个字节（8位）的内存。它的大小是固定的，因此可以用来节省内存，特别是在需要存储大量字符数据时。
+
+范围：char类型可以表示256种不同的字符，因为它使用8位的编码，通常采用ASCII编码或其他字符编码方案。ASCII编码包含了标准的英文字母、数字、标点符号和一些特殊字符。
+
+初始化：char变量可以通过赋予字符字面值来初始化，例如：
+
+cppCopy code
+
+char letter = 'A';
+
+字符转义序列：C++中有一些特殊的字符转义序列，以表示一些不可见的或特殊字符，如换行符（'\n'）、制表符（'\t'）、回车（'\r'）等。这些转义序列可以在char变量中使用。
+cppCopy code
+
+char newline = '\n'; // 表示换行符 char tab = '\t'; // 表示制表符
+
+用途：char类型通常用于处理文本数据，例如读取和处理文本文件、创建字符串、以及在字符数组中存储文本。它还可以用于创建自定义字符型数据，例如ASCII码中未定义的特殊字符。
+
+字符运算：char类型可以进行一些字符运算，例如比较两个字符的大小或执行字符的算术操作。这在某些情况下是有用的，例如在密码验证或字符替换中。
+
+cppCopy code
+
+char a = 'A'; char b = 'B'; if (a < b) { // 这段代码将执行，因为 'A' 的ASCII码小于 'B' }
+
+char类型在C++中非常有用，尤其是在处理文本和字符数据时。虽然它只能表示单个字符，但它是构建字符串和文本处理的基本组成部分。
+
+ASCII码
+
+ChatGPT
+
+ASCII（American Standard Code for Information Interchange，美国信息交换标准代码）是一种用于在计算机和通信设备之间传输文本信息的字符编码标准。它定义了一组整数值，每个整数值对应一个字符或控制字符。ASCII编码使用7位二进制数（0到127）来表示字符，后来扩展的ASCII编码使用了8位，称为扩展ASCII，以支持更多字符。
+
+以下是ASCII编码中的一些常见字符和其对应的整数值：
+
+整数值	字符	描述
+0	NUL	空字符 (Null)
+7	BEL	响铃 (Bell)
+8	BS	退格 (Backspace)
+9	TAB	水平制表符 (Tab)
+10	LF	换行 (Line Feed)
+13	CR	回车 (Carriage Return)
+32	空格	空格字符 (Space)
+48	0	数字0
+65	A	大写字母A
+97	a	小写字母a
+127	DEL	删除 (Delete)
+这些是ASCII编码中的一些示例。它包括控制字符（如NUL、BS、LF等）和可见字符（如数字、字母、空格等）。ASCII编码在计算机和通信中广泛使用，它允许不同系统之间的文本数据的互通，因为字符的整数值是标准的。值得注意的是，ASCII编码只包含128个字符，不包括国际字符和特殊符号，因此它在全球范围内的字符表示方面存在局限性。为了支持更多字符，后来出现了其他编码标准，如Unicode。
+
+回文数
+
+ChatGPT
+
+回文数是指从左到右和从右到左读取时都相同的整数。例如，121、1331和12321都是回文数，而123、1234和12345则不是回文数。
+
+在编程中，可以使用以下方法来判断一个整数是否是回文数：
+
+将整数转化为字符串：将整数转换为字符串，然后比较字符串的正向和反向版本是否相同。
+cppCopy code
+
+#include <iostream> #include <string> using namespace std; bool isPalindrome(int x) { string str = to_string(x); string reversedStr = str; reverse(reversedStr.begin(), reversedStr.end()); return str == reversedStr; } int main() { int num = 121; if (isPalindrome(num)) { cout << num << " 是回文数" << endl; } else { cout << num << " 不是回文数" << endl; } return 0; }
+
+反转一半数字：将整数的后半部分反转，并与前半部分进行比较。如果它们相同，那么整数就是回文数。这个方法更有效，因为不需要将整个数字转换为字符串。
+cppCopy code
+
+bool isPalindrome(int x) { if (x < 0 || (x % 10 == 0 && x != 0)) { return false; } int reversed = 0; while (x > reversed) { reversed = reversed * 10 + x % 10; x /= 10; } return x == reversed || x == reversed / 10; }
+
+这两种方法都可以用来判断一个整数是否是回文数。第二种方法是更常用的，因为它具有更好的性能，不需要额外的字符串转换操作。
+
+c++为什么整数除以整数结果是整数
+
+ChatGPT
+
+C++中整数除以整数结果为整数的原因是因为这是C++整数除法的默认行为。整数是一种数据类型，它表示没有小数部分的数值。当两个整数相除时，C++会执行整数除法，这意味着它将直接舍去小数部分，只返回整数部分的结果。
+
+这种行为是有用的，因为在某些情况下，我们只关心结果的整数部分，而不需要小数部分。例如，假设你有一个整数表示的商品数量，你想知道购买该商品所需的整数箱子数量。在这种情况下，整数除法非常方便。
+
+如果你想执行浮点数除法（即希望结果包含小数部分），可以通过以下方式之一来实现：
+
+将其中一个或两个操作数转换为浮点数，例如使用static_cast操作符：
+cppCopy code
+
+int a = 5; int b = 2; double result = static_cast<double>(a) / b;
+
+在除法操作中使用浮点数常量：
+cppCopy code
+
+int a = 5; int b = 2; double result = a / 2.0;
+
+这将导致浮点数除法，结果将包含小数部分。要注意，使用浮点数进行除法可能会引入舍入误差，因为浮点数在内部以二进制表示。因此，对于精确的小数运算，可能需要使用特定的数值类型（如double或float）以及适当的精度控制方法。
+
+c++如何判断一个5位数是回文数
+
+ChatGPT
+
+要判断一个5位数是否是回文数，你可以将其分解成各个位数，然后检查这些位数是否形成回文结构。下面是一个C++示例，展示如何判断一个5位数是否是回文数：
+
+cppCopy code
+
+#include <iostream> using namespace std; bool isPalindrome(int num) { if (num < 10000 || num > 99999) { // 不是5位数，直接返回false return false; } int originalNum = num; // 保存原始数字 int reversedNum = 0; // 用于存储反转后的数字 while (num > 0) { int digit = num % 10; reversedNum = reversedNum * 10 + digit; num /= 10; } return originalNum == reversedNum; } int main() { int num; cout << "请输入一个5位数: "; cin >> num; if (isPalindrome(num)) { cout << num << " 是回文数" << endl; } else { cout << num << " 不是回文数" << endl; } return 0; }
+
+这个程序首先检查输入是否是一个5位数（在10,000到99,999之间）。然后，它将数字反转并与原始数字进行比较，如果它们相等，那么这个数字就是一个回文数。
+
+请注意，这只适用于5位数。如果你需要检查其他位数的回文数，你可以相应地修改代码。
+
+请使用比较每一位数的方法计算
+
+ChatGPT
+
+如果你想使用逐位比较的方法来判断一个5位数是否是回文数，可以将数字的各个位数提取出来，并逐个比较它们。下面是一个C++示例，展示如何使用逐位比较的方法来判断：
+
+cppCopy code
+
+#include <iostream> using namespace std; bool isPalindrome(int num) { if (num < 10000 || num > 99999) { // 不是5位数，直接返回false return false; } int digit1 = num / 10000; // 提取万位数字 int digit2 = (num / 1000) % 10; // 提取千位数字 int digit4 = (num / 10) % 10; // 提取十位数字 int digit5 = num % 10; // 提取个位数字 return (digit1 == digit5) && (digit2 == digit4); } int main() { int num; cout << "请输入一个5位数: "; cin >> num; if (isPalindrome(num)) { cout << num << " 是回文数" << endl; } else { cout << num << " 不是回文数" << endl; } return 0; }
+
+在这个示例中，我们提取了数字的每一位数（万位、千位、十位和个位），然后将第一位与最后一位比较，将第二位与倒数第二位比较。如果它们都相等，那么这个数字就是一个回文数。
+
+如何使用取余以及取整等简单方法
+
+ChatGPT
+
+你可以使用取余和取整等简单方法来判断一个5位数是否是回文数。以下是一个示例，展示如何使用这些方法：
+
+cppCopy code
+
+#include <iostream> using namespace std; bool isPalindrome(int num) { if (num < 10000 || num > 99999) { // 不是5位数，直接返回false return false; } // 提取各位数字 int digit1 = num / 10000; // 万位数字 int digit5 = num % 10; // 个位数字 if (digit1 != digit5) { // 如果万位和个位数字不相等，直接返回false return false; } // 接下来，提取千位、百位和十位数字 int numWithoutFirstAndLastDigits = (num % 10000) / 10; // 反转中间3位数 int reversedNum = 0; while (numWithoutFirstAndLastDigits > 0) { int digit = numWithoutFirstAndLastDigits % 10; reversedNum = reversedNum * 10 + digit; numWithoutFirstAndLastDigits /= 10; } return num == reversedNum; } int main() { int num; cout << "请输入一个5位数: "; cin >> num; if (isPalindrome(num)) { cout << num << " 是回文数" << endl; } else { cout << num << " 不是回文数" << endl; } return 0; }
+
+这个示例首先提取了万位和个位数字，如果它们不相等，就直接返回false。然后，它提取了千位、百位和十位数字，反转这些数字，最后将它们与原始数字比较，以确定是否是回文数。这个方法使用了取余和取整等简单的数学操作，而不需要将整数转换为字符串。
+
+我没学习反转这个知识点
+
+ChatGPT
+
+如果你还没有学习如何反转一个数字，那么你可以使用以下简单的方法来判断一个5位数是否是回文数，而无需反转数字：
+
+cppCopy code
+
+#include <iostream> using namespace std; bool isPalindrome(int num) { if (num < 10000 || num > 99999) { // 不是5位数，直接返回false return false; } int digit1 = num / 10000; // 万位数字 int digit5 = num % 10; // 个位数字 int digit2 = (num / 1000) % 10; // 千位数字 int digit4 = (num / 10) % 10; // 十位数字 return (digit1 == digit5) && (digit2 == digit4); } int main() { int num; cout << "请输入一个5位数: "; cin >> num; if (isPalindrome(num)) { cout << num << " 是回文数" << endl; } else { cout << num << " 不是回文数" << endl; } return 0; }
+
+在这个示例中，我们直接使用数学运算提取了每一位数字，并进行了逐位比较，而不涉及数字的反转操作。这是一个更简单的方法，不需要对数字进行反转操作。
+
+#include <iostream>什么意思
+
+ChatGPT
+
+#include <iostream> 是C++程序中的一个预处理指令，它告诉编译器包括标准输入输出流库（iostream），以便在程序中使用输入和输出操作。
+
+具体来说，这个指令引入了C++标准库中的iostream头文件，其中包括用于控制台输入和输出的标准输入流 (cin) 和标准输出流 (cout)。这些流用于从键盘读取用户输入和向屏幕输出文本。
+
+在包含<iostream>头文件之后，你可以在程序中使用cin来接收用户的输入，例如：
+
+cppCopy code
+
+int number; std::cin >> number; // 从用户输入中读取整数并存储在number中
+
+你还可以使用cout来向屏幕输出信息，例如：
+
+cppCopy code
+
+std::cout << "Hello, World!" << std::endl; // 输出 "Hello, World!" 到屏幕
+
+这些输入和输出操作是C++程序中常见的，<iostream>头文件允许你使用它们。
+
+ChatGPT
+
+It seems like your message is empty. If you have any questions or need information on a specific topic, please feel free to ask, and I'll be happy to assist you.
+
+c++如何定义一个全球总人数变量
+
+ChatGPT
+
+在C++中，你可以定义一个全局总人数变量，通常应该放在程序的顶层（在任何函数之外）。你可以使用extern关键字在全局范围内声明这个变量，然后在程序的其他文件中定义它。这样可以确保在多个文件中共享同一个全局变量。
+
+首先，在一个头文件中（通常具有.h扩展名），你可以声明这个全局变量，例如：
+
+cppCopy code
+
+// total_population.h #ifndef TOTAL_POPULATION_H #define TOTAL_POPULATION_H extern int globalTotalPopulation; #endif
+
+然后，在一个源文件中（通常具有.cpp扩展名），你可以定义这个全局变量：
+
+cppCopy code
+
+// total_population.cpp #include "total_population.h" int globalTotalPopulation = 0; // 初始化总人数为0
+
+现在，你可以在程序的任何其他源文件中包含total_population.h头文件，并访问globalTotalPopulation变量以获取或更新全球总人数的值。
+
+请注意，全局变量应该谨慎使用，因为它们可能会导致命名冲突和不良的代码组织。在较大的项目中，使用全局变量可能不是最佳实践，可以考虑使用命名空间、单例模式或其他封装方式来更好地管理全局状态。
+
+用long可以定义吗
+
+ChatGPT
+
+是的，你可以使用 long 类型定义全局变量。long 是 C++ 中的整数数据类型，通常用于存储较大范围的整数值。如果你希望定义一个全局总人数变量，并且这个变量可能需要存储非常大的整数值，long 类型是一个合适的选择。
+
+你可以像这样定义一个全局 long 类型的变量：
+
+cppCopy code
+
+#include "total_population.h" long globalTotalPopulation = 0; // 初始化总人数为0
+
+这将创建一个全局变量 globalTotalPopulation，它可以存储长整数值。这个变量可以在程序的不同文件中共享和访问，以跟踪总人口。
+
+请确保在任何需要使用这个全局变量的文件中包含 total_population.h 头文件以获得变量的声明。
+
+77亿人可以用吗
+
+ChatGPT
+
+long 类型在C++中通常占用4字节或8字节，具体取决于编译器和平台。对于绝大多数现代编译器和平台来说，long 类型占用4字节，范围约为 -2,147,483,648 到 2,147,483,647，可以容纳大约 20 亿的整数值。如果你需要存储 77 亿人口这样的大整数值，long 类型可能不够大，会导致溢出。
+
+为了存储如此大的整数值，你可以考虑使用 long long 类型，它通常占用 8 字节，范围更广，可以容纳大约 92 京（9,223,372,036,854,775,807）的整数值，足够存储 77 亿人口。
+
+你可以这样定义一个 long long 类型的全局变量：
+
+cppCopy code
+
+#include "total_population.h" long long globalTotalPopulation = 0; // 初始化总人数为0
+
+这将使你能够安全地存储和处理如 77 亿人口这样的大整数值。
+
+int
+
+ChatGPT
+
+如果你决定使用 int 数据类型来表示全球总人数，那么你需要明确 int 的范围。通常，int 类型在大多数现代系统上是32位，可以表示的范围大约是 -2,147,483,648 到 2,147,483,647。这个范围大约能够容纳 21 亿人口。
+
+如果你要表示 77 亿人口，int 类型可能不够大，会导致溢出。在这种情况下，你应该考虑使用 long long 或其他更大的整数数据类型，以确保能够容纳如此大的整数值。如之前所述，long long 可以容纳更大的整数值，通常是 64 位。
+
+跟我说一下其他的所有范围吧
+
+ChatGPT
+
+以下是C++中主要整数数据类型的范围，以及它们的大小和典型的位数：
+
+char：通常占用1字节，范围是 -128 到 127（有符号）或 0 到 255（无符号）。典型情况下，它使用8位。
+
+short：通常占用2字节，范围是 -32,768 到 32,767（有符号）或 0 到 65,535（无符号）。典型情况下，它使用16位。
+
+int：通常占用4字节，范围是 -2,147,483,648 到 2,147,483,647（有符号）或 0 到 4,294,967,295（无符号）。典型情况下，它使用32位。
+
+long：通常占用4字节或8字节，范围取决于编译器和平台，但通常是 -2,147,483,648 到 2,147,483,647（4字节）或更大的范围（8字节）。典型情况下，4字节 long 使用32位，8字节 long 使用64位。
+
+long long：通常占用8字节，范围是 -9,223,372,036,854,775,808 到 9,223,372,036,854,775,807（有符号）或 0 到 18,446,744,073,709,551,615（无符号）。它使用64位。
+
+这些范围和大小在不同编译器和平台上可能会有一些变化，但它们是大多数情况下的典型值。你可以根据你的需要选择合适的整数数据类型，以确保能够容纳你的数据而不发生溢出。如果需要表示大的整数值，long long 是一个常用的选择，因为它的范围相对较大。
+————————————————
+版权声明：本文为CSDN博主「Sonder9999」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/2303_77643119/article/details/133917951
