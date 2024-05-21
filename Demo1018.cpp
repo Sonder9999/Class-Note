@@ -1,11 +1,3 @@
-/* ¶àÐÐ×¢ÊÍ
- * FileName: main.cpp
- * Function: Print a string to screen
- * Author:   yyh
- * E-mail:   feifanyyh@163.com
- * Date:     Oct 18th, 2023
- */
-
 #include <iostream>
 #include <climits>
 #include <cfloat>
@@ -15,30 +7,30 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello world!HHHHHHHHHHHHHHHHHH\n" // ÒýÈë×ªÒå×Ö·û\n
+    cout << "Hello world!HHHHHHHHHHHHHHHHHH\n" // å¼•å…¥è½¬ä¹‰å­—ç¬¦\n
          << "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHH\n"
          << "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHH\n"
-         // \t ±íÊ¾ÖÆ±í·û£¬Ò»°ãÕ¼8¸ö¿Õ¸ñÎ»ÖÃ
+         // \t è¡¨ç¤ºåˆ¶è¡¨ç¬¦ï¼Œä¸€èˆ¬å 8ä¸ªç©ºæ ¼ä½ç½®
          << "HH\tHHHHHHHHHHHHHHHHHHHHHHHHHH" << endl;
 
-    // DataType:ÄÚ½¨ÀàÐÍºÍÓÃ»§¶¨ÒåÀàÐÍ
-    // ÄÚ½¨ÀàÐÍ£ºbool,char,int,float,double,long, long long
-    // ÄÚ½¨ÀàÐÍ¿ÉÒÔÓÐÐÞÊÎ·û£ºsigned¡¢unsigned
-    // Ä¬ÈÏ¶¼ÊÇsignedÀàÐÍ
-    // Êý¾ÝÀàÐÍ ±äÁ¿Ãû;
-    bool bl1; // ±äÁ¿µÄÉùÃ÷
-    bool bl2=true;// ±äÁ¿µÄ¶¨Òå
+    // DataType:å†…å»ºç±»åž‹å’Œç”¨æˆ·å®šä¹‰ç±»åž‹
+    // å†…å»ºç±»åž‹ï¼šbool,char,int,float,double,long, long long
+    // å†…å»ºç±»åž‹å¯ä»¥æœ‰ä¿®é¥°ç¬¦ï¼šsignedã€unsigned
+    // é»˜è®¤éƒ½æ˜¯signedç±»åž‹
+    // æ•°æ®ç±»åž‹ å˜é‡å;
+    bool bl1; // å˜é‡çš„å£°æ˜Ž
+    bool bl2=true;// å˜é‡çš„å®šä¹‰
     cout << "bl1=" << bl1 << endl;
     cout << "bl2=" << bl2 << endl;
     cout << "Sizeof(bool)=" << sizeof(bool) << endl;
     cout << "Sizeof(bl1)=" << sizeof(bl1) << endl;
 
     char ch1;
-    char ch2='a'; // Êµ¼ÊÉÏch2Àï´æ´¢µÄÊÇ×Ö·ûaµÄASCII±àÂëÖµ
+    char ch2='a'; // å®žé™…ä¸Šch2é‡Œå­˜å‚¨çš„æ˜¯å­—ç¬¦açš„ASCIIç¼–ç å€¼
     cout << "ch1=" << ch1 << endl;
-    ch1=101; // °´ASCII±àÂëÖµ¸³Öµ£¬Êµ¼ÊÎª×Ö·ûe
-    cout << "ch1=" << ch1 << endl; // Êä³ö×Ö·ûe
-    cout << "ch1=" << (int)ch1 << endl;// Êä³ö×Ö·ûeµÄ±àÂëÖµ
+    ch1=101; // æŒ‰ASCIIç¼–ç å€¼èµ‹å€¼ï¼Œå®žé™…ä¸ºå­—ç¬¦e
+    cout << "ch1=" << ch1 << endl; // è¾“å‡ºå­—ç¬¦e
+    cout << "ch1=" << (int)ch1 << endl;// è¾“å‡ºå­—ç¬¦eçš„ç¼–ç å€¼
     cout << "ch2=" << ch2 << endl;
     cout << "ch2=" << (int)ch2 << endl;
     cout << "A=" <<(char) (ch2-32) << endl;
@@ -47,8 +39,8 @@ int main()
 
     int a;
     int b=10;
-    int c(100); // C++11ÀïµÄ³õÊ¼»¯·½Ê½
-    int d{1000};// C++11ÀïµÄ³õÊ¼»¯·½Ê½
+    int c(100); // C++11é‡Œçš„åˆå§‹åŒ–æ–¹å¼
+    int d{1000};// C++11é‡Œçš„åˆå§‹åŒ–æ–¹å¼
     cout << "a=" << a << endl;
     cout << "b=" << b << endl;
     cout << "c=" << c << endl;
@@ -61,20 +53,20 @@ int main()
     int sum=b+c+ch2;
     cout << "sum=" << sum << endl;
 
-    // ÕûÊýÏà³ý£¬Æä½á¹û±ØÎªÕûÊý
+    // æ•´æ•°ç›¸é™¤ï¼Œå…¶ç»“æžœå¿…ä¸ºæ•´æ•°
     cout << "1/2=" << 1/2 << endl;
     cout << "3/2=" << 3/2 << endl;
     cout << "5/3=" << 5/3 << endl;
     cout << "4/2=" << 4/2 << endl;
 
-    // % È¡Ä£»òÕßÊÇÇóÓà£¬Æä²Ù×÷ÊýÖ»ÄÜÊÇÕûÊý
+    // % å–æ¨¡æˆ–è€…æ˜¯æ±‚ä½™ï¼Œå…¶æ“ä½œæ•°åªèƒ½æ˜¯æ•´æ•°
     cout << "1%2=" << 1%2 << endl;
     cout << "3%2=" << 3%2 << endl;
 
     /*
-     * ÐÎÈç12321£¬10101£¬34543ÕâÑùµÄÊý½Ð×ö»ØÎÄÊý
-     * 23523£¬12435£¬ÕâÑùµÄÊý²»ÊÇ»ØÎÄÊý
-     * ¼Ù¶¨ÊäÈëµÄ¾ÍÊÇÒ»¸ö5Î»Êý£¬ÈçºÎÅÐ¶Ï¸ÃÊýÊÇ·ñÎª»ØÎÄÊý
+     * å½¢å¦‚12321ï¼Œ10101ï¼Œ34543è¿™æ ·çš„æ•°å«åšå›žæ–‡æ•°
+     * 23523ï¼Œ12435ï¼Œè¿™æ ·çš„æ•°ä¸æ˜¯å›žæ–‡æ•°
+     * å‡å®šè¾“å…¥çš„å°±æ˜¯ä¸€ä¸ª5ä½æ•°ï¼Œå¦‚ä½•åˆ¤æ–­è¯¥æ•°æ˜¯å¦ä¸ºå›žæ–‡æ•°
      */
     int number;
 ret:
@@ -96,7 +88,7 @@ ret:
     cout << "The biggest of long is: " << LONG_MAX << endl;
     cout << "The smallest of long is: " << LONG_MIN << endl;
 
-    // ¸¡µãÊýµÄ±íÊ¾¸ñÊ½²Î¼ûIEEE 754
+    // æµ®ç‚¹æ•°çš„è¡¨ç¤ºæ ¼å¼å‚è§IEEE 754
     float f1=1000;
     cout << "f1=" << f1 << endl;
     cout << "Sizeof(float)=" << sizeof(float) << endl;
@@ -125,7 +117,7 @@ ret:
     cout << "The biggest of long long is: " << LLONG_MAX << endl;
     cout << "The smallest of long long is: " << LLONG_MIN << endl;
 
-    // ¶¨ÒåÒ»¸ö±äÁ¿£¬´æ´¢È«ÇòµÄ×ÜÈË¿Ú£¬Ó¦¸ÃÈçºÎ¶¨Òå´Ë±äÁ¿
-    // long long×îºÏÊÊ
+    // å®šä¹‰ä¸€ä¸ªå˜é‡ï¼Œå­˜å‚¨å…¨çƒçš„æ€»äººå£ï¼Œåº”è¯¥å¦‚ä½•å®šä¹‰æ­¤å˜é‡
+    // long longæœ€åˆé€‚
     return 0;
 }
